@@ -42,7 +42,7 @@ tunnels:
   - name: lets-encrypt
     proto: http
     addr: 80
-    bind_tls: false
+    schemes: [http]
     hostname: home.example.com
 ```
 
@@ -81,14 +81,14 @@ details, see [ngrok's documentation][ngrok_docs_tunnels].
 | `proto`*      | all       | tunnel protocol name, one of http, tcp, tls                                                         |
 | `addr`*       | all       | forward traffic to this local port number or network address                                        |
 | `inspect`     | all       | enable http request inspection                                                                      |
-| `auth`        | http      | HTTP basic authentication credentials to enforce on tunneled requests                               |
+| `basic_auth`  | http      | HTTP basic authentication credentials to enforce on tunneled requests                               |
 | `host_header` | http      | Rewrite the HTTP Host header to this value, or preserve to leave it unchanged                       |
-| `bind_tls`    | http      | bind an HTTPS or HTTP endpoint or both true, false, or both                                         |
+| `schemes`     | http      | bind an HTTPS or HTTP endpoint [http, https]                                                        |
 | `subdomain`   | http, tls | subdomain name to request. If unspecified, uses the tunnel name                                     |
 | `hostname`    | http, tls | hostname to request (requires reserved name and DNS CNAME)                                          |
 | `crt`         | tls       | PEM TLS certificate at this path to terminate TLS traffic before forwarding locally                 |
 | `key`         | tls       | PEM TLS private key at this path to terminate TLS traffic before forwarding locally                 |
-| `client_cas`  | tls       | PEM TLS certificate authority at this path will verify incoming TLS client connection certificates. |
+| `mutual_tls_cas`| tls     | PEM TLS certificate authority at this path will verify incoming TLS client connection certificates. |
 | `remote_addr` | tcp       | bind the remote TCP port on the given address                                                       |
 | `metadata`    | all       | arbitrary user-defined metadata that will appear in the ngrok service API when listing tunnels      |
 

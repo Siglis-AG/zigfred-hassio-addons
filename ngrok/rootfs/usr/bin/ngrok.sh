@@ -4,6 +4,9 @@ bashio::log.debug "Building ngrok.yml..."
 configPath="/ngrok-config/ngrok.yml"
 mkdir -p /ngrok-config
 echo "log: stdout" > $configPath
+
+echo "version: 2" >> $configPath
+
 bashio::log.debug "Web interface port: $(bashio::addon.port 4040)"
 if bashio::var.has_value "$(bashio::addon.port 4040)"; then
   echo "web_addr: 0.0.0.0:$(bashio::addon.port 4040)" >> $configPath
@@ -39,17 +42,17 @@ for id in $(bashio::config "tunnels|keys"); do
   if [[ $inspect != "null" ]]; then
     echo "    inspect: $inspect" >> $configPath
   fi
-  auth=$(bashio::config "tunnels[${id}].auth")
-  if [[ $auth != "null" ]]; then
-    echo "    auth: $auth" >> $configPath
+  basic_auth=$(bashio::config "tunnels[${id}].basic_auth")
+  if [[ $basic_auth != "null" ]]; then
+    echo "    basic_auth: $basic_auth" >> $configPath
   fi
   host_header=$(bashio::config "tunnels[${id}].host_header")
   if [[ $host_header != "null" ]]; then
     echo "    host_header: $host_header" >> $configPath
   fi
-  bind_tls=$(bashio::config "tunnels[${id}].bind_tls")
-  if [[ $bind_tls != "null" ]]; then
-    echo "    bind_tls: $bind_tls" >> $configPath
+  scheme=$(bashio::config "tunnels[${id}].scheme")
+  if [[ $scheme != "null" ]]; then
+    echo "    scheme: $scheme" >> $configPath
   fi
   subdomain=$(bashio::config "tunnels[${id}].subdomain")
   if [[ $subdomain != "null" ]]; then
@@ -67,9 +70,9 @@ for id in $(bashio::config "tunnels|keys"); do
   if [[ $key != "null" ]]; then
     echo "    key: $key" >> $configPath
   fi
-  client_cas=$(bashio::config "tunnels[${id}].client_cas")
-  if [[ $client_cas != "null" ]]; then
-    echo "    client_cas: $client_cas" >> $configPath
+  mutual_tls_cas=$(bashio::config "tunnels[${id}].mutual_tls_cas")
+  if [[ $mutual_tls_cas != "null" ]]; then
+    echo "    mutual_tls_cas: $mutual_tls_cas" >> $configPath
   fi
   remote_addr=$(bashio::config "tunnels[${id}].remote_addr")
   if [[ $remote_addr != "null" ]]; then
