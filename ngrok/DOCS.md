@@ -9,12 +9,12 @@
 5. Add this addon to your `trusted_proxies` list in `configuration.yaml`.
 
     ```yaml
-      http:
-        use_x_forwarded_for: true
-        trusted_proxies:
-        - 127.0.0.1
-        - 172.30.32.0/24
-        - 172.30.33.0/24
+    http:
+      use_x_forwarded_for: true
+      trusted_proxies:
+      - 127.0.0.1
+      - 172.30.32.0/24
+      - 172.30.33.0/24
     ```
 
     **Note**: _If you've modified your Supervisor or Docker network you may_
@@ -31,19 +31,19 @@ _[API](#home-assistant-integration) to be notified through Home Assistant._
 Example add-on configuration:
 
 ```yaml
-  log_level: info
-  auth_token: my-auth-token
-  region: us
-  tunnels:
-    - name: hass
-      proto: tls
-      addr: 8123
-      hostname: home.example.com
-    - name: lets-encrypt
-      proto: http
-      addr: 80
-      bind_tls: false
-      hostname: home.example.com
+log_level: info
+auth_token: my-auth-token
+region: us
+tunnels:
+  - name: hass
+    proto: tls
+    addr: 8123
+    hostname: home.example.com
+  - name: lets-encrypt
+    proto: http
+    addr: 80
+    bind_tls: false
+    hostname: home.example.com
 ```
 
 ## Options

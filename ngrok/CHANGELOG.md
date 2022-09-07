@@ -1,5 +1,10 @@
 ## Changes
 
+### 3.0.0
+
+- Release this addon with latest ngrok 3 client and Home Assistant Base 3.16
+- Update documentation, icons accordingly and remove deprication note
+
 ### 2.1.8
 
 - Fix S6 error fixes [#12](https://github.com/dy1io/hassio-addons/issues/12)

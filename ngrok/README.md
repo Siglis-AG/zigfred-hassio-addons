@@ -1,6 +1,6 @@
-# Hass.io ngrok Client
+# Hass.io ngrok 3 Client
 
-A ngrok client for Hass.io
+A ngrok 3 client for Hass.io
 
 ## About
 
