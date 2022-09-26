@@ -13,4 +13,4 @@ able to setup a port forward, do not use this addon.
           Using a TLS tunnel will prevent this because you can control the certificate.
           To use some features of this add-on, you need a paid ngrok account._
 
-[github_link]: https://github.com/dy1io/hassio-ngrok/issues
+[github_link]: https://github.com/Siglis-AG/zigfred-hassio-addons/issues

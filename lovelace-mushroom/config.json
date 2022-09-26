@@ -1,0 +1,20 @@
+{
+  "name": "🍄 Mushroom",
+  "version": "1.0.0",
+  "slug": "lovelace-mushroom",
+  "description": "Mushroom cards for lovelace dashboard hosted as a Hass.io addon",
+  "init": false,
+  "url": "https://github.com/Siglis-AG/zigfred-hassio-addons",
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7",
+    "i386"
+  ],
+  "startup": "system",
+  "boot": "auto",
+  "ports": {
+    "4000/tcp": "80"
+  }
+}
