@@ -7,4 +7,4 @@ WORKDIR /home/static
 
 COPY ./static/* .
 
-CMD ["cp", "./mushroom.js", "./config/www/mushroom.js"]
+CMD ["cp", "./mushroom.js", "/config/www/mushroom.js"]
