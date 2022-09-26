@@ -1,8 +1,9 @@
 {
     "build_from": {
-        "aarch64": "arm64v8/busybox:1.35.0",
-        "amd64": "amd64/busybox:1.35.0",
-        "armv7": "arm32v7/busybox:latest",
-        "i386": "i386/busybox:latest"
+        "aarch64": "scratch",
+        "amd64": "scratch",
+        "armhf": "scratch",
+        "armv7": "scratch",
+        "i386": "scratch"
     }
 }
