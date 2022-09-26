@@ -1,4 +1,4 @@
-# Hass.io ngrok 3 Client
+# Lovelace Mushroom cards
 
 [lovelace-mushroom](https://github.com/piitaya/lovelace-mushroom) cards hosted as an addon.
 
