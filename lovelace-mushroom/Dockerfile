@@ -1,8 +1,8 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN mkdir -p /root
-WORKDIR /root
+RUN mkdir -p /static
+WORKDIR /static
 
 COPY ./static/* .
 
