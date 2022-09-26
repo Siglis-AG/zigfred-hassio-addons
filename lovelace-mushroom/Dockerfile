@@ -7,4 +7,4 @@ WORKDIR /home/static
 
 COPY ./static/* .
 
-CMD ["busybox", "httpd", "-f", "-v", "-p", "80"]
+CMD ["httpd", "-f", "-v", "-p", "80"]
