@@ -15,6 +15,6 @@
   "startup": "system",
   "boot": "auto",
   "ports": {
-    "4000/tcp": "80"
+    "80/tcp": "4000"
   }
 }
