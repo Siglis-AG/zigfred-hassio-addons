@@ -1,9 +1,9 @@
 {
     "build_from": {
-        "aarch64": "busybox:latest",
-        "amd64": "busybox:latest",
-        "armhf": "busybox:latest",
-        "armv7": "busybox:latest",
-        "i386": "busybox:latest"
+        "aarch64": "busybox:1.35.0",
+        "amd64": "busybox:1.35.0",
+        "armhf": "busybox:1.35.0",
+        "armv7": "busybox:1.35.0",
+        "i386": "busybox:1.35.0"
     }
 }
