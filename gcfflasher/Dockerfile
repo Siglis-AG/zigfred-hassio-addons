@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN install_packages pkg-config build-essential libgpiod-dev git
+RUN apk add pkgconfig alpine-sdk libgpiod-dev git
 
 RUN mkdir -p /app
 WORKDIR /app
