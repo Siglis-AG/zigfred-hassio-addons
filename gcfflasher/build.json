@@ -1,0 +1,9 @@
+{
+    "build_from": {
+        "aarch64": "bitnami/minideb:latest",
+        "amd64": "bitnami/minideb:latest",
+        "armhf": "bitnami/minideb:latest",
+        "armv7": "bitnami/minideb:latest",
+        "i386": "bitnami/minideb:latest"
+    }
+}
